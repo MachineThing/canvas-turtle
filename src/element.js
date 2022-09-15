@@ -1,17 +1,22 @@
 class CanvasTurtle extends HTMLCanvasElement {
     #iconx;
     #icony;
+    #heading;
     #penstate;
+    #ctx;
     constructor() {
         super();
         // Get values
         this.speed = this.hasAttribute("speed") ? this.getAttribute("speed") : 6;
         this.icon = this.hasAttribute("icon") ? this.getAttribute("icon") : "pointer";
-        this.#iconx = 0;
-        this.#icony = 0;
+
+        this.#iconx = 50;
+        this.#icony = 50;
+        this.#heading = 0;
         this.#penstate = true;
 
-        this.ctx = this.getContext('2d');
+        this.#ctx = this.getContext('2d');
+        
     }
 
     sayHi() {
@@ -19,22 +24,17 @@ class CanvasTurtle extends HTMLCanvasElement {
     }
 
     get position() {
+        // Return the turtle's position
         return {
-            "x": this.xpos,
-            "y": this.ypos
+            "x": this.#iconx,
+            "y": this.#icony
         }
     }
-    
-    get pos() {
-        return this.position;
-    }
 
-    get xpos() {
-        return this.#iconx;
-    }
-
-    get ypos() {
-        return this.#icony;
+    distance(x, y) {
+        // Return the distance from the turtle to a specified point
+        // √(|turtleX-x|^2 + |turtleY-y|^2)
+        return Math.sqrt(Math.abs(this.#iconx-x)**2 + Math.abs(this.#icony-y)**2);
     }
 }
 

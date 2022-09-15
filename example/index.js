@@ -1,4 +1,4 @@
 // This makes the turtle do some cool stuff
 "use strict";
 const turtle = document.getElementById("canvas");
-console.log(turtle.position)
+console.log(turtle.distance(25, 25))
