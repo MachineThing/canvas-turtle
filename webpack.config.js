@@ -7,5 +7,19 @@ module.exports = {
     output: {
         filename: 'canvasturtle.js',
         path: path.join(__dirname, 'dist')
+    },
+
+    module: {
+        rules: [
+            // Babel
+            {
+                loader: 'babel-loader',
+                test: /.js$/,
+                exclude: /node_modules/,
+                options: {
+                    presets: ["@babel/preset-env"]
+                }
+            }
+        ]
     }
 }
