@@ -6,12 +6,16 @@
     "build": "webpack build"
   },
   "keywords": [
-    "turtle",
+    "babel",
+    "webpack",
     "canvas",
     "graphics",
     "element",
     "educational",
-    "webpack"
+    "turtle",
+    "turtle-graphics",
+    "custom-element",
+    "custom-elements"
   ],
   "author": "Mason Fisher",
   "license": "MIT",
