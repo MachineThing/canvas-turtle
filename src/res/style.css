@@ -1,0 +1,12 @@
+canvas-turtle {
+    position: relative;
+    display: inline-block;
+}
+
+canvas-turtle * {
+    all: initial;
+}
+
+canvas-turtle img {
+    position: absolute;
+}

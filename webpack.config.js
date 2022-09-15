@@ -14,12 +14,23 @@ module.exports = {
             // Babel
             {
                 loader: 'babel-loader',
-                test: /.js$/,
+                test: /\.js$/i,
                 exclude: /node_modules/,
                 options: {
                     presets: ["@babel/preset-env"]
                 }
-            }
+            },
+            // SVG
+            {
+                loader: 'svg-inline-loader',
+                test: /\.svg$/i,
+                exclude: /node_modules/,
+            },
+            // CSS
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
         ]
     }
 }
