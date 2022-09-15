@@ -1,0 +1,19 @@
+{
+  "name": "canvas-turtle",
+  "version": "0.1.0",
+  "description": "Turtle graphics for your canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "turtle",
+    "canvas",
+    "graphics",
+    "element",
+    "educational",
+    "webpack"
+  ],
+  "author": "Mason Fisher",
+  "license": "MIT"
+}
