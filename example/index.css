@@ -2,3 +2,7 @@ canvas-turtle {
     border: 6px inset black;
     padding: 4px;
 }
+
+body {
+    background-color: antiquewhite;
+}

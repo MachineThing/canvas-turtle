@@ -12,6 +12,8 @@ class CanvasTurtle extends HTMLElement {
         this.width = this.hasAttribute("width") ? this.getAttribute("width") : 500;
         this.height = this.hasAttribute("height") ? this.getAttribute("height") : 500;
 
+        this.turtles = [];
+
         this.#canvasEle = document.createElement('canvas');
         this.#canvasEle.width = this.width;
         this.#canvasEle.height = this.height;

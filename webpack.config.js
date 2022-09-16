@@ -20,12 +20,13 @@ module.exports = {
                     presets: ["@babel/preset-env"]
                 }
             },
+            /*
             // SVG
             {
                 loader: 'svg-inline-loader',
                 test: /\.svg$/i,
                 exclude: /node_modules/,
-            },
+            },*/
             // CSS
             {
                 test: /\.css$/i,
