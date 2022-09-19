@@ -4,9 +4,10 @@ canvas-turtle {
 }
 
 canvas-turtle * {
+    /* Makes sure other CSS code doesn't screw up the canvas-turtle elements */
     all: initial;
 }
 
-canvas-turtle img {
+canvas-turtle svg {
     position: absolute;
 }

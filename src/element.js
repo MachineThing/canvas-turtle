@@ -2,7 +2,6 @@ import Turtle from "./turtle";
 
 class CanvasTurtle extends HTMLElement {
     #canvasEle;
-    #ctx;
 
     constructor() {
         super()
@@ -11,6 +10,8 @@ class CanvasTurtle extends HTMLElement {
         this.icon = this.hasAttribute("icon") ? this.getAttribute("icon") : true;
         this.width = this.hasAttribute("width") ? this.getAttribute("width") : 500;
         this.height = this.hasAttribute("height") ? this.getAttribute("height") : 500;
+        this.svgSize = this.hasAttribute("iconSize") ? this.getAttribute("iconSize") : 25;
+        this.svgStke = this.hasAttribute("iconThickness") ? this.getAttribute("iconThickness") : this.svgSize/12.5;
 
         this.turtles = [];
 
@@ -19,7 +20,7 @@ class CanvasTurtle extends HTMLElement {
         this.#canvasEle.height = this.height;
         this.appendChild(this.#canvasEle);
 
-        this.#ctx = this.#canvasEle.getContext('2d');
+        this.ctx = this.#canvasEle.getContext('2d');
 
         let turtleParent = this;
 
